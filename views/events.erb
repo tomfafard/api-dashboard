@@ -1,0 +1,18 @@
+<div class="small-6 small-offset-3 columns">
+  <div class="callout primary">
+    <h3>Today's Events</h3>
+  </div>
+
+  <div style="padding-left: 4rem" class="callout primary">
+    <h3>Events:</h3>
+    <ul>
+      <% @events.all_events.each do |event| %>
+      <li><%= event[:title] %></li>
+        <ul>
+          <li><strong>Time:</strong><%= event[:when] %></li>
+        </ul>
+      </br>
+      <% end %>
+    </ul>
+  </div>
+</div>
